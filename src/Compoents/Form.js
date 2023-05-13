@@ -1,61 +1,87 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from "styled-components"
+
+const init={
+    name:"",
+    lastname:"",
+    email:"",
+    contact:"",
+    company:"",
+    state:"",
+    desc:"",
+    dist:"",
+    info:""
+}
 const Form = () => {
+    const [data,setdata]=useState(init)
+    const handlechange=(e)=>{
+       const {name,value}=e.target;
+       setdata((prev)=>{
+        return {...prev,[name]:value}
+       })
+    }
+    const handlesubmit=(e)=>{
+        e.preventDefault();
+        console.log(data)
+        alert('Thank You For Connecting Us')
+        setdata(init)
+    }
+   // console.log(data)
   return (
      <Div className='container'>
         
-        <form>
+        <form onSubmit={handlesubmit}>
         <div className="content">
             <div className='input-box'>
                    <label>Full Name</label>
-                   <input/>
+                   <input type='text' name="name" placeholder='name'value={data.name} onChange={handlechange}/>
             </div>
             <div className='input-box'>
                    <label>Last Name</label>
-                   <input/>
+                   <input type='text' name="lastname" placeholder='lastname'value={data.lastname} onChange={handlechange}/>
             </div>
             <div className='input-box'>
                    <label>Email</label>
-                   <input/>
+                   <input type='text' name="email" placeholder='email'value={data.email} onChange={handlechange}/>
             </div>
             <div className='input-box'>
                    <label>Contact Number</label>
-                   <input/>
+                   <input type='text' name="contact" placeholder='contact'value={data.contact} onChange={handlechange}/>
             </div>
             <div className='input-box'>
                    <label>Company</label>
-                   <input/>
+                   <input type='text' name="company" placeholder='company'value={data.company} onChange={handlechange}/>
             </div>
             <div className='input-box'>
                    <label>State</label>
-                   <select>
-                    <option>M.P</option>
-                    <option>U.P</option>
-                    <option>Bihar</option>
-                    <option>C.G</option>
+                   <select type='text' name="state" placeholder='state'value={data.state} onChange={handlechange}>
+                   <option value="M.P.">M.P</option>
+                    <option value="U.P.">U.P</option>
+                    <option value="Bihar">Bihar</option>
+                    <option value="C.G">C.G</option>
                    </select>
             </div>
             <div className='input-box'>
                    <label>How would you describe yourself?</label>
-                   <select>
-                    <option>M.P</option>
-                    <option>U.P</option>
-                    <option>Bihar</option>
-                    <option>C.G</option>
+                   <select type='text' name="desc" placeholder='desc'value={data.desc} onChange={handlechange}>
+                   <option value="M.P.">M.P</option>
+                    <option value="U.P.">U.P</option>
+                    <option value="Bihar">Bihar</option>
+                    <option value="C.G">C.G</option>
                    </select>
             </div>
             <div className='input-box'>
                    <label>Preferred Distributor</label>
-                   <select>
-                    <option>M.P</option>
-                    <option>U.P</option>
-                    <option>Bihar</option>
-                    <option>C.G</option>
+                   <select type='text' name="dist" placeholder='dist'value={data.dist} onChange={handlechange}>
+                    <option value="M.P.">M.P</option>
+                    <option value="U.P.">U.P</option>
+                    <option value="Bihar">Bihar</option>
+                    <option value="C.G">C.G</option>
                    </select>
             </div>
             <div className='input-box' >
                    <label>Addictional Information</label>
-                   <input />
+                   <input type='text' name="info" placeholder='info'value={data.info} onChange={handlechange} />
             </div>
             <div  >
                   
@@ -75,9 +101,7 @@ const Form = () => {
    
   )
 }
-
-export default Form
-
+export default Form;
 
 const Div=styled.div`
 background-color: white;
@@ -134,5 +158,19 @@ button{
     width:80%;
     height:40px;
     border-radius: 5px;
+}
+.head{
+    text-align: left;
+font: normal normal 600 34px/41px Aktifo A;
+letter-spacing: 0px;
+color: #000000;
+opacity: 1;
+}
+.p{
+    text-align: left;
+font: normal normal normal 20px/24px Aktifo A;
+letter-spacing: 0px;
+color: #292929;
+opacity: 1;
 }
 `

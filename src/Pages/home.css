@@ -117,3 +117,51 @@ font: normal normal 300 20px/34px Aktifo A;
 letter-spacing: 0px;
 color: #515151;
 }
+@media only screen and (min-width: 320px) and (max-width: 880px)  {
+    .container{
+        width:100%
+    }
+    .item1{
+        height:800px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .item2{
+        
+        height:1000px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .item2-1{
+        margin-top: 270px;
+        display: none;
+    }
+    .item3{
+        width:100%;
+        height:1500px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .new1{
+        height:1000px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+.dol{
+    
+font: normal normal 600 51px/63px Aktifo A;
+letter-spacing: 0px;
+color: #131313;
+opacity: 1;
+}
+.print{
+    
+font: normal normal 300 20px/28px Aktifo A;
+letter-spacing: 0px;
+color: #131313;
+opacity: 1;
+}

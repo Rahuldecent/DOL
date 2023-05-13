@@ -18,8 +18,8 @@ const Home = () => {
           <h1>to the level with DOL</h1>
           <h1>Max verlaminates</h1>
           <br></br>
-          <p className='pair'>Pair with MPI 1105 wrapping film</p>
-          <p className='pair'>for ramped up protection</p>
+          <p>Pair with MPI 1105 wrapping film</p>
+          <p >for ramped up protection</p>
           <div className='item-img' style={{ display: "flex", width: "50%", margin: "auto" }}>
             <div>
               <img src={'./images/Group.jpg'} />
@@ -43,9 +43,8 @@ const Home = () => {
       </div>
       <div className='item2'>
         <div className='item2-1'>
-          <h1>DOL Max Overlaminate Films</h1>
-          <p>Printed graphics deserves maximum protection.DOL Max is the solution.</p>
-          <br />
+          <h1 className='dol'>DOL Max Overlaminate Films</h1>
+          <p className='print'>Printed graphics deserves maximum protection.DOL Max is the solution.</p>
           <h3>Feactures & Benefits:</h3>
           <ul className='list'>
             <li>Premium vertical durability of up to 7 years and up to 2 years horizontal durability protection.</li>
@@ -61,7 +60,7 @@ const Home = () => {
         </div>
         <div className='item2-2'></div>
       </div>
-      <div style={{ display: "flex" }}>
+      <div style={{ display: "flex" }} className='new1'>
         <div className='item3'></div>
         <div className='item4'>
           <h1>Why us?</h1>
